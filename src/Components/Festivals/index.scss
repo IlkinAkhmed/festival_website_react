@@ -1,0 +1,67 @@
+#festivals {
+    width: 96%;
+    height: fit-content;
+    margin-left: 60px;
+    padding: 50px 0;
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 50px;
+
+        .card {
+            width: 31%;
+            height: 200px;
+            position: relative;
+            background-color: black;
+
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: 0;
+                opacity: 0.7;
+            }
+
+            h1,
+            h3 {
+                z-index: 1;
+                position: absolute;
+                color: white;
+                margin-left: 10%;
+            }
+
+            h1 {
+                bottom: 50px;
+            }
+
+            h3 {
+                bottom: 25px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 678px) {
+    #festivals{
+        width: 100%;
+        .wrapper{
+            padding: 5px;
+            .card{
+                width: 100%!important;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    #festivals{
+        width: 100%;
+        margin-left: 0;
+        .wrapper{
+            .card{
+                width: 48%;
+            }
+        }
+    }
+}

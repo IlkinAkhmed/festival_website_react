@@ -1,0 +1,99 @@
+#programme{
+    width: 96%;
+    margin-left: 60px;
+    background-color: #EDEDED;
+    min-height: fit-content;
+    .container{
+        padding: 50px;
+        .date-of-programmes{
+            padding: 20px 0;
+            .cards{
+                margin: 20px 0;
+                border-bottom: 1px solid gray;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .month{
+                    width: 10%;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .name{
+                    width: 50%;
+                    border-left: 1px solid gray;
+                    border-right: 1px solid gray;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .time{
+                    width: 20%;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .get-ticket{
+                    width: 20%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    border-left: 1px solid gray;
+                    height: 50px;
+                    p{
+                        cursor: pointer;
+                    }
+                    .fa-arrow-right{
+                        transition: 0.4s;
+                        transform: rotate(-45deg);
+                    }
+                    p:hover .fa-arrow-right{
+                        transform: rotate(0);
+                        transition: 0.4s;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #programme{
+        width: 100%;
+        margin-left: 0;
+        .container{
+            padding: 50px 20px;
+            .date-of-programmes{
+                .cards{
+                    flex-wrap: wrap;
+                    height: 200px;
+                    .month{
+                        width: 100%;
+                        justify-content: flex-start;
+                    }
+                    .name{
+                        width: 100%;
+                        border: none;
+                        justify-content: flex-start;
+                    }
+                    .time{
+                        width: 100%;
+                        justify-content: flex-start;
+                    }
+                    .get-ticket{
+                        width: 100%;
+                        border: none;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                    }
+                }
+            }
+        }
+    }
+    
+}

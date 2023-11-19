@@ -1,0 +1,137 @@
+footer {
+    width: 96%;
+    margin-left: 60px;
+    padding: 50px;
+    height: fit-content;
+    background-color: black;
+
+    .footer-inner {
+        .footer-up {
+            width: 100%;
+            display: flex;
+            height: 50%;
+            border-bottom: 1px solid gray;
+            align-items: center;
+            padding: 50px 0;
+
+            .logo {
+                width: 40%;
+            }
+
+            .details {
+                width: 60%;
+                display: flex;
+                justify-content: space-between;
+
+                ul {
+                    width: 25%;
+                    color: white;
+                }
+            }
+        }
+
+        .footer-down {
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            padding: 50px 0;
+
+            .socialMedia {
+                color: white;
+                width: 40%;
+
+                i {
+                    color: white;
+                    margin-left: 10px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .location {
+                width: 20%;
+            }
+
+            .signup {
+                width: 20%;
+                border-bottom: 1px solid gray;
+
+                p {
+                    display: flex;
+                    justify-content: space-between;
+
+                    i {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 568px) {
+    footer {
+        width: 100%;
+        margin-left: 0;
+        padding: 50px 10px;
+
+        .footer-up {
+            flex-wrap: wrap;
+
+            .logo {
+                width: 100% !important;
+            }
+
+            .details {
+                margin-top: 20px;
+                width: 100% !important;
+                flex-wrap: wrap;
+                justify-content: center !important;
+                gap: 20px;
+
+                ul {
+                    width: 100% !important;
+
+                }
+            }
+        }
+
+        .footer-down {
+            flex-wrap: wrap;
+            gap: 30px;
+            .socialMedia {
+                width: 100% !important;
+            }
+
+            .location {
+                width: 100% !important;
+            }
+
+            .signup {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 569px) and (max-width: 1024px) {
+    footer {
+        width: 100%;
+        margin-left: 0;
+
+        .footer-up {
+            flex-wrap: wrap;
+
+            .logo {
+                width: 100% !important;
+            }
+
+            .details {
+                margin-top: 20px;
+                width: 100% !important;
+            }
+        }
+    }
+}

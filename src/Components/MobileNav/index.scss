@@ -1,0 +1,144 @@
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background-color: black;
+    z-index: 3;
+    display: none;
+    border-bottom: 1px solid gray;
+
+    .nav-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+
+        .logo {
+            width: 11%;
+
+            h3 {
+                color: white;
+            }
+        }
+
+        .menuBar {
+            width: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            cursor: pointer;
+
+            &:hover {
+                .line1 {
+                    width: 80%;
+                    transition: 0.4s;
+                }
+
+                .line2 {
+                    width: 100%;
+                    transition: 0.4s;
+                }
+            }
+
+            .line1 {
+                width: 100%;
+                height: 3px;
+                background-color: white;
+                margin-bottom: 5px;
+                transition: 0.4s;
+                border-radius: 35px;
+
+            }
+
+            .line2 {
+                width: 80%;
+                height: 3px;
+                background-color: white;
+                transition: 0.4s;
+                border-radius: 35px;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+.mobile-nav {
+    width: 100%;
+    padding: 50px 0;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    transition: 0.4s;
+    z-index: 2;
+    max-height: 300px;
+    overflow-y: scroll;
+    
+
+    .accordion {
+        width: 80%;
+        margin: auto;
+
+        ul {
+            line-height: 2;
+            width: 100%;
+
+            li {
+                width: 100%;
+
+                p {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    color: white;
+                    cursor: pointer;
+                    transition: 0.4s;
+                    width: 100%;
+
+                    &:hover {
+                        color: #eaa57f;
+                        transform: translateX(5px);
+                        transition: 0.4s;
+                    }
+
+                }
+
+                .inner-texts {
+                    max-height: 0;
+                    overflow: hidden;
+
+                    li {
+                        color:  gold;  
+                    }
+                }
+            }
+        }
+    }
+}
+
+.open-mobile-nav {
+    transform: translateY(-320px);
+}
+
+.d-none {
+    display: none;
+}
+.open-accordion{
+    max-height: fit-content!important;
+}
+.rotate-arrow{
+    transform: rotate(90deg);
+    color: white;
+}
+@media screen and (max-width: 1024px) {
+    nav {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+}

@@ -1,0 +1,165 @@
+.fixedNav {
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    padding: 30px 10px;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid gray;
+    z-index: 3;
+
+    .logo {
+        height: 70%;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .menuBar {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            cursor: pointer;
+
+            &:hover {
+                .line1 {
+                    width: 80%;
+                    transition: 0.4s;
+                }
+
+                .line2 {
+                    width: 100%;
+                    transition: 0.4s;
+                }
+            }
+
+            .line1 {
+                width: 100%;
+                height: 3px;
+                background-color: white;
+                margin-bottom: 5px;
+                transition: 0.4s;
+                border-radius: 35px;
+
+            }
+
+            .line2 {
+                width: 80%;
+                height: 3px;
+                background-color: white;
+                transition: 0.4s;
+                border-radius: 35px;
+                transition: 0.3s;
+            }
+        }
+
+        .logoText {
+            height: 30%;
+            width: 100%;
+
+            h4 {
+                transform: rotate(-90deg);
+                color: white;
+            }
+        }
+    }
+
+    .socialMedia {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 1px solid gray;
+
+        i {
+            color: white;
+            transition: 0.4s;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .fa-instagram:hover {
+            color: rgb(239, 100, 123);
+            transition: 0.4s;
+        }
+
+        .fa-youtube:hover {
+            color: red;
+            transition: 0.4s;
+        }
+
+        .fa-vimeo-v:hover {
+            color: blue;
+            transition: 0.4s;
+        }
+
+        .fa-twitter:hover {
+            color: blue;
+            transition: 0.4s;
+        }
+
+    }
+}
+
+.nav {
+    background-color: rgb(0, 0, 0);
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    z-index: 2;
+
+    .nav-inner {
+        padding: 0 30px;
+        width: 100%;
+
+        ul {
+            line-height: 2;
+            width: 100%;
+
+            li {
+                font-size: 13px;
+                font-weight: bold;
+                cursor: pointer;
+                color: white;
+                transition: 0.4s;
+                width: 100%;
+
+                &:hover {
+                    color: #eaa57f;
+                    transform: translateX(5px);
+                    transition: 0.4s;
+                }
+            }
+        }
+    }
+}
+
+.open-nav {
+    transform: translateX(-360px);
+    transition: 0.5s ease-in-out;
+}
+
+.d-none {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 1024px) {
+    .fixedNav{
+        display: none;
+    }
+    .nav{
+        display: none;
+    }
+}
